@@ -44,7 +44,7 @@ class UserController extends BaseController {
                 $time = $user->logintime;
             }
             $msg = Config::get('testconst.success_add');
-            $resp =  array('name' => $user->name,'islogin' =>$user->islogin, 'time' => $time);
+            $resp =  array('name' => $user->name,'islogin' =>$user->islogin, 'time' => $time, 'permission' => $user->permission);
             return Response::json($resp);
         }
         else{
